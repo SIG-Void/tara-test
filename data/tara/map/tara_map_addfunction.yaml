@@ -1,0 +1,24 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['添加功能']"
+  allureStory: 添加功能
+01_tara_map_addfunction:
+  host: ${{host()}}
+  url: /tara/map/addfunction
+  method: post
+  detail: 测试添加功能
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    componentIds:
+    - string
+    funcDesc: string
+    funcName: string
+    projectID: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

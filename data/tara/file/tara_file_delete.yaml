@@ -1,0 +1,21 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['删除文件']"
+  allureStory: 删除文件
+01_tara_file_delete:
+  host: ${{host()}}
+  url: /tara/file/delete
+  method: post
+  detail: 测试删除文件
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    fileIds:
+    - '{{fileIdList}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

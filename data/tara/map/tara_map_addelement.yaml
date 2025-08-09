@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['添加组件 - done']"
+  allureStory: 添加组件 - done
+01_tara_map_addelement:
+  host: ${{host()}}
+  url: /tara/map/addelement
+  method: post
+  detail: 测试添加组件 - done
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

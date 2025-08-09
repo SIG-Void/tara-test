@@ -1,0 +1,21 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['用户登录接口']"
+  allureStory: 用户登录接口
+01_tara_login:
+  host: ${{host()}}
+  url: /tara/login
+  method: post
+  detail: 测试用户登录接口
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    email: lt15191796518@163.com
+    password: Sigvoid123
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

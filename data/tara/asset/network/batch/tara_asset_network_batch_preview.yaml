@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['批量生成网络安全预览']"
+  allureStory: 批量生成网络安全预览
+01_tara_asset_network_batch_preview:
+  host: ${{host()}}
+  url: /tara/asset/network/batch/preview
+  method: post
+  detail: 测试批量生成网络安全预览
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

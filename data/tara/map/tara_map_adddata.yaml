@@ -1,0 +1,27 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['添加数据 - done']"
+  allureStory: 添加数据 - done
+01_tara_map_adddata:
+  host: ${{host()}}
+  url: /tara/map/adddata
+  method: post
+  detail: 测试添加数据 - done
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    component: ''
+    componentName: 未命名数据
+    projectID: '749297120889389056'
+    position:
+      x: 0
+      y: 0
+      z: 0
+    elementComponentID: COMP-3
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

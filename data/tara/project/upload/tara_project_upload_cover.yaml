@@ -1,0 +1,21 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['上传项目封面']"
+  allureStory: 上传项目封面
+01_tara_project_upload_cover:
+  host: ${{host()}}
+  url: /tara/project/upload/cover
+  method: post
+  detail: 测试上传项目封面
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    coverImageBase64: string
+    projectID: '{{projectID}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

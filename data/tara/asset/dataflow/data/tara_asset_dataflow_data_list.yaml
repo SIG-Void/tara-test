@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['获取数据流数据列表']"
+  allureStory: 获取数据流数据列表
+01_tara_asset_dataflow_data_list:
+  host: ${{host()}}
+  url: /tara/asset/dataflow/data/list
+  method: post
+  detail: 测试获取数据流数据列表
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['删除项目']"
+  allureStory: 删除项目
+01_tara_project_delete:
+  host: ${{host()}}
+  url: /tara/project/delete
+  method: post
+  detail: 测试删除项目
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    projectID: '{{projectID}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

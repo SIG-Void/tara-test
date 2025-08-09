@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['获取拓扑图详情-done']"
+  allureStory: 获取拓扑图详情-done
+01_tara_map_detail:
+  host: ${{host()}}
+  url: /tara/map/detail
+  method: post
+  detail: 测试获取拓扑图详情-done
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    projectID: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

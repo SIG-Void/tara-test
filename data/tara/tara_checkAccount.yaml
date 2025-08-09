@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['检查账号接口']"
+  allureStory: 检查账号接口
+01_tara_checkAccount:
+  host: ${{host()}}
+  url: /tara/checkAccount
+  method: post
+  detail: 测试检查账号接口
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    email: lt15191796518@163.com
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

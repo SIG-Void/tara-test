@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['根据损害ID获取威胁数据']"
+  allureStory: 根据损害ID获取威胁数据
+01_tara_asset_threat_getbydamage:
+  host: ${{host()}}
+  url: /tara/asset/threat/getbydamage
+  method: post
+  detail: 测试根据损害ID获取威胁数据
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['获取资产选项信息列表']"
+  allureStory: 获取资产选项信息列表
+01_tara_asset_identity_choiceList:
+  host: ${{host()}}
+  url: /tara/asset/identity/choiceList
+  method: get
+  detail: 测试获取资产选项信息列表
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

@@ -1,0 +1,32 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['编辑环境- done']"
+  allureStory: 编辑环境- done
+01_tara_map_editenvironment:
+  host: ${{host()}}
+  url: /tara/map/editenvironment
+  method: post
+  detail: 测试编辑环境- done
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    componentDesc: string
+    componentName: string
+    environmentID: string
+    opType: 0
+    position:
+      x: 0
+      y: 0
+      z: 0
+    projectID: string
+    size:
+      height: 0
+      length: 0
+      width: 0
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

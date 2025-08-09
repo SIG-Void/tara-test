@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['资产识别']"
+  allureStory: 资产识别
+01_tara_asset_identity_identify:
+  host: ${{host()}}
+  url: /tara/asset/identity/identify
+  method: post
+  detail: 测试资产识别
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    projectID: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

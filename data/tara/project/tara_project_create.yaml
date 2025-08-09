@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['创建项目']"
+  allureStory: 创建项目
+01_tara_project_create:
+  host: ${{host()}}
+  url: /tara/project/create
+  method: post
+  detail: 测试创建项目
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    name: '{{randomName}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

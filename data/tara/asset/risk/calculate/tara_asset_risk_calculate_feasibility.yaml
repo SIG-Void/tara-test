@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['计算攻击可行性评级']"
+  allureStory: 计算攻击可行性评级
+01_tara_asset_risk_calculate_feasibility:
+  host: ${{host()}}
+  url: /tara/asset/risk/calculate/feasibility
+  method: post
+  detail: 测试计算攻击可行性评级
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

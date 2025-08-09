@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['更新网络安全目标字段']"
+  allureStory: 更新网络安全目标字段
+01_tara_asset_risk_update_network-security-target:
+  host: ${{host()}}
+  url: /tara/asset/risk/update/network-security-target
+  method: post
+  detail: 测试更新网络安全目标字段
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

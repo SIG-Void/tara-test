@@ -1,0 +1,21 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['获取项目详情']"
+  allureStory: 获取项目详情
+01_tara_project_detail:
+  host: ${{host()}}
+  url: /tara/project/detail
+  method: post
+  detail: 测试获取项目详情
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    projectID: '{{projectID}}'
+    projectStage: 0
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

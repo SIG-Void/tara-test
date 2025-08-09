@@ -1,0 +1,69 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['编辑元器件属性']"
+  allureStory: 编辑元器件属性
+01_tara_map_editattribute:
+  host: ${{host()}}
+  url: /tara/map/editattribute
+  method: post
+  detail: 测试编辑元器件属性
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    apiList:
+    - ApiIDStr: string
+      apiName: string
+      protocol: string
+      x: 0
+      y: 0
+    componentDesc: string
+    componentID: string
+    componentName: string
+    componentType: 0
+    dataFlowList:
+    - channelComponentID: string
+      dataFlowComponentID: string
+      direction: 0
+      fromAPI:
+        ApiIDStr: string
+        apiName: string
+        protocol: string
+        x: 0
+        y: 0
+      fromElementComponentID: string
+      fromElementComponentName: string
+      toAPI:
+        ApiIDStr: string
+        apiName: string
+        protocol: string
+        x: 0
+        y: 0
+      toElementComponentID: string
+      toElementComponentName: string
+      vertices:
+      - x: 0
+        y: 0
+    dataList:
+    - component: string
+      componentName: string
+      componentType: 0
+      dataComponentID: string
+      elementComponentID: string
+      position:
+        x: 0
+        y: 0
+        z: 0
+    hardwareList:
+    - hardwareID: 0
+      hardwareName: string
+    projectID: string
+    softwareList:
+    - softwareID: 0
+      softwareName: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

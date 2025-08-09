@@ -1,0 +1,18 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['获取攻击路径详情']"
+  allureStory: 获取攻击路径详情
+01_tara_asset_attackpath_detail:
+  host: ${{host()}}
+  url: /tara/asset/attackpath/detail
+  method: post
+  detail: 测试获取攻击路径详情
+  headers: {}
+  requestType: json
+  is_run:
+  data: {}
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

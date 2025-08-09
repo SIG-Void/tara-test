@@ -1,0 +1,20 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['资产分析']"
+  allureStory: 资产分析
+01_tara_asset_identity_analysis:
+  host: ${{host()}}
+  url: /tara/asset/identity/analysis
+  method: post
+  detail: 测试资产分析
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    projectID: '749272812606029824'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

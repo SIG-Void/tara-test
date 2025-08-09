@@ -1,0 +1,21 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['复制组件- done']"
+  allureStory: 复制组件- done
+01_tara_map_copyelement:
+  host: ${{host()}}
+  url: /tara/map/copyelement
+  method: post
+  detail: 测试复制组件- done
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    elementComponentID: COMP-8
+    projectID: '{{projectID}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

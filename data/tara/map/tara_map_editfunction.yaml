@@ -1,0 +1,26 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['编辑功能']"
+  allureStory: 编辑功能
+01_tara_map_editfunction:
+  host: ${{host()}}
+  url: /tara/map/editfunction
+  method: post
+  detail: 测试编辑功能
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    componentIds:
+    - string
+    funcDesc: string
+    funcID: string
+    funcName: string
+    opType: 0
+    projectID: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

@@ -1,0 +1,24 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['用户注册接口']"
+  allureStory: 用户注册接口
+01_tara_register:
+  host: ${{host()}}
+  url: /tara/register
+  method: post
+  detail: 测试用户注册接口
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    confirmPassword: litao19980325.
+    email: lt15191796518@163.com
+    inviteCode: string
+    password: litao19980325.
+    verifyCode: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

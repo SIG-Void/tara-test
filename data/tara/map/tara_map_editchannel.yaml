@@ -1,0 +1,51 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['编辑通道']"
+  allureStory: 编辑通道
+01_tara_map_editchannel:
+  host: ${{host()}}
+  url: /tara/map/editchannel
+  method: post
+  detail: 测试编辑通道
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    channelComponentID: string
+    componentDesc: string
+    componentName: string
+    curFromElementComponentID: string
+    curToElementComponentID: string
+    direction: 0
+    fromApi:
+      ApiIDStr: string
+      apiName: string
+      protocol: string
+      x: 0
+      y: 0
+    newFromElementComponentID: string
+    newToElementComponentID: string
+    opType: 0
+    pointList:
+    - fromAPI: string
+      fromElementComponentID: string
+      toAPI: string
+      toElementComponentID: string
+      vertices: string
+    position:
+      x: 0
+      y: 0
+      z: 0
+    projectID: string
+    toApi:
+      ApiIDStr: string
+      apiName: string
+      protocol: string
+      x: 0
+      y: 0
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

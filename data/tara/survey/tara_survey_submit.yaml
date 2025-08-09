@@ -1,0 +1,26 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['用户信息']"
+  allureStory: 用户信息
+01_tara_survey_submit:
+  host: ${{host()}}
+  url: /tara/survey/submit
+  method: post
+  detail: 测试用户信息
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    company: string
+    country: string
+    email: string
+    name: string
+    phoneNumber: string
+    requirement: string
+    role: string
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+

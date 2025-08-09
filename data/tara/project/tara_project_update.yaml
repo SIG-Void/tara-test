@@ -1,0 +1,26 @@
+case_common:
+  allureEpic: Tara API
+  allureFeature: "['更新项目']"
+  allureStory: 更新项目
+01_tara_project_update:
+  host: ${{host()}}
+  url: /tara/project/update
+  method: post
+  detail: 测试更新项目
+  headers:
+    Content-Type: application/json
+  requestType: data
+  is_run:
+  data:
+    assumptionsAndConstraints: string
+    description: string
+    environmentAndBoundary: string
+    fileIds:
+    - string
+    name: string
+    projectID: '{{projectID}}'
+  dependence_case: false
+  assert:
+    status_code: 200
+  sql:
+
